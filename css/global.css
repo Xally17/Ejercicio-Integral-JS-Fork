@@ -25,6 +25,13 @@ html {
     --color-warning-bg: #FDF3DC;
     --color-warning-border: #F5E0A0;
 
+    --color-info: #2A7A9B;
+    --color-info-bg: #DDF0F7;
+    --color-info-border: #B8E0EF;
+
+    --color-cart-active: #A83232;
+    --color-cart-active-hover: #8C2222;
+
     /* Tipografía */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Nunito', 'Segoe UI', sans-serif;
@@ -173,7 +180,7 @@ main .img-fluid.border {
 }
 
 /* Badge de estado */
-#statusBtn {
+#statusBadge {
     background-color: var(--color-success-bg);
     color: var(--color-success);
     border: 1px solid var(--color-primary-light);
@@ -184,6 +191,21 @@ main .img-fluid.border {
     /* Solo visual, no interactivo */
 }
 
+/* Badge de destacado */
+#infoBtn {
+    background-color: var(--color-info-bg);
+    color: var(--color-info);
+    border: 1px solid var(--color-info-border);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    pointer-events: none;
+}
+
+div#topProduct {
+    display: none;
+}
+
 /* Precio */
 #prodDescription .fs-4 {
     font-family: var(--font-heading);
@@ -192,7 +214,7 @@ main .img-fluid.border {
 }
 
 /* Descripción corta */
-#prodDescription>p {
+#prodDescription>div#description {
     color: var(--color-text-muted);
     font-size: 0.95rem;
     line-height: 1.7;
@@ -207,10 +229,8 @@ main .img-fluid.border {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-#fullDescription:hover {
-    background-color: var(--color-bg);
-    color: var(--color-text-main);
-    border-color: var(--color-text-muted);
+div#fullDescription {
+    display: block;
 }
 
 /* Botones de acción */
